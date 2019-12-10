@@ -4,7 +4,7 @@
     "description": "webpack 4 & Vue.js",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "test": "jest --config test/jest.config.js",
         "dev": "webpack-dev-server --config build/webpack.config.dev.js",
         "lint": "eslint --ext .js,.vue src",
         "lint:fix": "eslint --ext .js,.vue src --fix"
@@ -12,13 +12,16 @@
     "author": "jake",
     "license": "ISC",
     "dependencies": {
+        "npm-check-updates": "^3.2.2",
         "vue": "^2.6.10",
         "vue-router": "^3.1.3"
     },
     "devDependencies": {
         "@babel/core": "^7.7.5",
         "@babel/preset-env": "^7.7.6",
+        "@vue/test-utils": "^1.0.0-beta.30",
         "babel-eslint": "^10.0.3",
+        "babel-jest": "^24.9.0",
         "babel-loader": "^8.0.6",
         "copy-webpack-plugin": "^5.1.0",
         "css-loader": "^3.3.0",
@@ -31,8 +34,11 @@
         "eslint-plugin-standard": "^4.0.1",
         "eslint-plugin-vue": "^6.0.1",
         "html-webpack-plugin": "^3.2.0",
+        "jest": "^24.9.0",
+        "jest-serializer-vue": "^2.0.2",
         "stylus": "^0.54.7",
         "stylus-loader": "^3.0.2",
+        "vue-jest": "^4.0.0-beta.2",
         "vue-loader": "^15.7.2",
         "vue-style-loader": "^4.1.2",
         "vue-template-compiler": "^2.6.10",

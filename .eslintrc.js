@@ -9,5 +9,15 @@ module.exports = {
     ],
     plugins: [
         'vue'
-    ]
+    ],
+
+    // npm i --save-dev jest babel-jest vue-jest jest-serializer-vue @vue/test-utils
+    env: {
+        browser: true,
+        node: true,
+        mocha: true
+    },
+    globals: {
+        expect: true
+    }
 }
