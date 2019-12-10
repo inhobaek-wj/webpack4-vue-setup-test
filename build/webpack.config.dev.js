@@ -25,6 +25,12 @@ module.exports = {
                 use: 'vue-loader'
             },
 
+            // npm i --save-dev @babel/core babel-loader @babel/preset-env
+            {
+                test: /\.js$/,
+                use: 'babel-loader'
+            },
+
             // npm i --save-dev css-loader vue-style-loader
             {
                 test: /\.css$/,
