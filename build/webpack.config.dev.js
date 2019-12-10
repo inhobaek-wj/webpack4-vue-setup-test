@@ -7,9 +7,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin'); // npm i --save-dev ht
 module.exports = {
     mode: 'development',
 
-    entry: [
-        './src/index.js'
-    ],
+    // it is the default in webpack 4, so don't need it.
+    // entry: [
+    //     './src/index.js'
+    // ],
 
     devServer: {
         hot: true,
