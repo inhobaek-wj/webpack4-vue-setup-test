@@ -3,6 +3,9 @@
 const webpack = require('webpack');
 const { VueLoaderPlugin } = require('vue-loader');
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // npm i --save-dev html-webpack-plugin
+const CopyWebpackPlugin = require('copy-webpack-plugin'); // npm i --save-dev copy-webpack-plugin
+
+const utils = require('./utils');
 
 module.exports = {
     mode: 'development',
@@ -58,6 +61,11 @@ module.exports = {
             filename: 'index.html',
             template: 'index.html',
             inject: true
-        })
+        }),
+        new CopyWebpackPlugin([{
+            from: utils.resolve('static/img'),
+            to: utils.resolve('dist/static/img'),
+            toType: 'dir'
+        }])
     ]
 };
