@@ -2,7 +2,7 @@
 
 const webpack = require('webpack');
 const { VueLoaderPlugin } = require('vue-loader');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin'); // npm i --save-dev html-webpack-plugin
 
 module.exports = {
     mode: 'development',
@@ -23,6 +23,15 @@ module.exports = {
             {
                 test: /\.vue$/,
                 use: 'vue-loader'
+            },
+
+            // npm i --save-dev css-loader vue-style-loader
+            {
+                test: /\.css$/,
+                use: [
+                    'vue-style-loader',
+                    'css-loader'
+                ]
             }
         ]
     },
