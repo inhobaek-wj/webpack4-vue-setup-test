@@ -4,3 +4,14 @@
         <h1>Good Evening San Dimas!</h1>
     </div>
 </template>
+
+
+<script>
+ import HelloComponent from './components/HelloComponent.vue';
+
+ export default {
+     components: {
+         HelloComponent
+     }
+ };
+</script>
