@@ -21,6 +21,13 @@ module.exports = {
 
     module: {
         rules: [
+            // npm i --save-dev eslint-loader
+            {
+                test: /\.(js|vue)$/,
+                use: 'eslint-loader',
+                enforce: 'pre'
+            },
+
             // npm i --save-dev vue-loader vue-template-compiler
             {
                 test: /\.vue$/,
