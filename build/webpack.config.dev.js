@@ -20,6 +20,7 @@ module.exports = {
 
     module: {
         rules: [
+            // npm i --save-dev vue-loader vue-template-compiler
             {
                 test: /\.vue$/,
                 use: 'vue-loader'
